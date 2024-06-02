@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario de Disquera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Registrar Nueva Disquera</h1>
+    <form th:action="@{/disquera/add}" th:object="${disquera}" method="post">
+        <label for="idDisquera" class="form-label">ID:</label>
+        <input class="form-control" type="text" id="idDisquera" th:field="*{idDisquera}"/>
+        <br/>
+        <label for="nitDisquera" class="form-label">NIT:</label>
+        <input class="form-control" type="text" id="nitDisquera" th:field="*{nitDisquera}"/>
+        <br/>
+        <label for="nombreDisquera" class="form-label">Nombre:</label>
+        <input class="form-control" type="text" id="nombreDisquera" th:field="*{nombreDisquera}"/>
+        <br/>
+        <label for="telefonoDisquera" class="form-label">Teléfono:</label>
+        <input class="form-control" type="text" id="telefonoDisquera" th:field="*{telefonoDisquera}"/>
+        <br/>
+        <label for="direccionDisquera" class="form-label">Dirección:</label>
+        <input  class="form-control" type="text" id="direccionDisquera" th:field="*{direccionDisquera}"/>
+        <br/>
+        <label for="estadoDisquera" class="form-label">Estado:</label>
+        <input  class="form-check-input" type="checkbox" id="estadoDisquera" th:field="*{estadoDisquera}"/>
+        <br/>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
+</body>
+</html>
