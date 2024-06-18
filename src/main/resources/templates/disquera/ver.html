@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ver Disquera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Detalles de la Disquera</h1>
+    <p>ID: <span th:text="${disquera.idDisquera}">1</span></p>
+    <p>NIT: <span th:text="${disquera.nitDisquera}">123456789</span></p>
+    <p>Nombre: <span th:text="${disquera.nombreDisquera}">Disquera A</span></p>
+    <p>Teléfono: <span th:text="${disquera.telefonoDisquera}">1234567890</span></p>
+    <p>Dirección: <span th:text="${disquera.direccionDisquera}">Dirección A</span></p>
+    <p>Estado: <span th:text="${disquera.estadoDisquera ? 'Activo' : 'Inactivo'}">Activo</span></p>
+
+</body>
+</html>
